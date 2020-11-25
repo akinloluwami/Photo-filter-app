@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: deepskyblue;
+}
+img{
+    width: 300px;
+    transition:  all ease 0.3s;
+}
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.filter1{
+    filter: saturate(1.2);
+    transition:  all ease 0.3s;
+}
+.filter2{
+    filter: brightness(1.2);
+    transition:  all ease 0.3s;
+}
+.filter3{
+    filter: sepia(1);
+    transition:  all ease 0.3s;
+}
+.filter4{
+    filter: grayscale(1);
+    transition:  all ease 0.3s;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:40%;
+}
+.btn{
+    width: 100px;
+    height: 100px;
+    background-image: url('./img/janiece.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-1{
+    filter: saturate(1.2);
+    transition:  all ease 0.5s;
+}
+.btn-2{
+    filter: brightness(1.05);
+    transition:  all ease 0.5s;
+}
+.btn-3{
+    filter: sepia(1);
+    transition:  all ease 0.5s;
+}
+.btn-4{
+    filter: grayscale(1);
+    transition:  all ease 0.5s;
+}
+.active{
+    border: 2px solid #fff;
+    transform: scale(1.18);
+    transition:  all ease 0.5s;
+}
+.saturate, .brighten, .sepia, .b-w{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    animation-name: fade;
+    animation-duration: 3s;
+    opacity: 0;
+}
+.show{
+    display: block;
+}
+@keyframes fade{
+    0%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0;
+    }
+}
