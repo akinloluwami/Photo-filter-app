@@ -24,16 +24,10 @@ btns.forEach(btn => {
         }
 
         filters.forEach(filter => {
-            if(btn.classList.contains('btn-1') && filter.classList.contains('saturate')) {
-                filter.classList.toggle('show');
-            }
-            else if(btn.classList.contains('btn-2') && filter.classList.contains('brighten')) {
-                filter.classList.toggle('show');
-            }
-            else if(btn.classList.contains('btn-3') && filter.classList.contains('sepia')) {
-                filter.classList.toggle('show');
-            }
-            else if(btn.classList.contains('btn-4') && filter.classList.contains('b-w')) {
+            if((btn.classList.contains('btn-1') && filter.classList.contains('saturate')) 
+            || (btn.classList.contains('btn-2') && filter.classList.contains('brighten'))
+            || (btn.classList.contains('btn-3') && filter.classList.contains('sepia'))
+            || (btn.classList.contains('btn-4') && filter.classList.contains('b-w'))) {
                 filter.classList.toggle('show');
             }
         })
